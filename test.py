@@ -15,26 +15,20 @@ def current_balance():
 
 def deposit():
   global balance
-  deposit_amount = float(
-      input(
-          "\n📥 How much money do you want to bless your bank account with? "))
+  deposit_amount = float(input("\n📥 How much money do you want to bless your bank account with? "))
   balance += deposit_amount
-  print(
-      f"\n✅ Nice! Your wallet is slightly heavier now. New balance: {balance}")
+  print(f"\n✅ Nice! Your wallet is slightly heavier now. New balance: {balance}")
 
 
 def withdraw():
   global balance
   withdraw_amount = float(
-      input(
-          "\n📤 How much money do you want to drain from your life savings? "))
+      input("\n📤 How much money do you want to drain from your life savings? "))
   if withdraw_amount > balance:
     print("\n⚠️ Bro, you trying to withdraw air? You’re broke af! 💸💨")
   else:
     balance -= withdraw_amount
-    print(
-        f"\n✅ Okay, hope you didn’t spend it on dumb stuff. New balance: {balance}"
-    )
+    print(  f"\n✅ Okay, hope you didn’t spend it on dumb stuff. New balance: {balance}" )
 
 
 def exit_program():
@@ -46,7 +40,7 @@ print("🏦 Welcome to 'We Hope You Have Money' Bank!!")
 
 while True:
   main()
-  choice = input("🔢 Enter your choice (or just cry about your finances): ")
+  choice = input("\n🔢 Enter your choice (or just cry about your finances): ")
 
   if choice == "1":
     current_balance()
